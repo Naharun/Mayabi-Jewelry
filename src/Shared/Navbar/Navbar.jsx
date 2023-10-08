@@ -18,7 +18,7 @@ const Navbar = () => {
                        {navItems}
                     </ul>
                 </div>
-                <img className="w-12" src={logo} alt="" />
+                <img className="w-14" src={logo} alt="" />
                 <a className="btn btn-ghost normal-case text-xl">Mayabi Jewelry</a>
             </div>
             <div className="navbar-center hidden lg:flex">
