@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import Registration from "../pages/Registration/Registration";
 import AddJewelry from "../pages/AddJewelry/AddJewelry";
+import AllJewelry from "../pages/Home/AllJewelry/AllJewelry";
   
   export const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ import AddJewelry from "../pages/AddJewelry/AddJewelry";
         {
           path: "/addJewelry",
           element: <AddJewelry></AddJewelry>
+        },
+        {
+          path: "/allJewelry",
+          element: <AllJewelry></AllJewelry>
         }
       ]
     },
