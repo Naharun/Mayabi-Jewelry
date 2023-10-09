@@ -7,7 +7,7 @@ import img3 from "../../../assets/img3.avif"
 
 const Banner = () => {
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between my-2">
             <h2 className=" font-bold font-serif leading-tight italic text-6xl text-current">WE CAN PROVIDE PRODUCTS<br /> AS PER YOUR REQUIREMENT
             <br /><a className=" font-normal text-3xl font-sans not-italic"> Stay with Mayabi Jewelry..!! </a>
             </h2>
