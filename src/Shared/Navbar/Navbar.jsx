@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/sparkly-gold-diamond-icon_53876-115029.avif"
 import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProviders";
+import { AuthContext } from "../../pages/provider/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);

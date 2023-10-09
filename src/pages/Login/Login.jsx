@@ -3,7 +3,7 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../../providers/AuthProviders';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 const Login = () => {

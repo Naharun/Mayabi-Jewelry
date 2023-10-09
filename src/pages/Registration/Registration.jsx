@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Registration = () => {
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
