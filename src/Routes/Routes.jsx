@@ -8,10 +8,12 @@ import Login from "../pages/Login/Login";
 import Registration from "../pages/Registration/Registration";
 import AddJewelry from "../pages/AddJewelry/AddJewelry";
 import AllJewelry from "../pages/Home/AllJewelry/AllJewelry";
+import Errorpage from "../pages/Errorpage/Errorpage";
   
   export const router = createBrowserRouter([
     {
       path: "/",
+      errorElement: <Errorpage></Errorpage>,
       element: <Main></Main>,
       children: [
         {
