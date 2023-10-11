@@ -9,6 +9,7 @@ import Registration from "../pages/Registration/Registration";
 import AddJewelry from "../pages/AddJewelry/AddJewelry";
 import AllJewelry from "../pages/Home/AllJewelry/AllJewelry";
 import Errorpage from "../pages/Errorpage/Errorpage";
+import MyJewelry from "../pages/MyJewelry/MyJewelry";
   
   export const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ import Errorpage from "../pages/Errorpage/Errorpage";
         {
           path: "/allJewelry",
           element: <AllJewelry></AllJewelry>
+        },
+        {
+          path: "/myJewelry",
+          element: <MyJewelry></MyJewelry>
         }
       ]
     },
