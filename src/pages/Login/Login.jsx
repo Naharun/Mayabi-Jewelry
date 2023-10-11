@@ -4,11 +4,15 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../provider/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import { app } from '../../Firebase/firebase.config';
 
+const auth = getAuth(app)
+const provider = new GoogleAuthProvider();
 
 const Login = () => {
     const [disabled, setDisabled] = useState(true);
-    const { signIn } = useContext(AuthContext);
+    const { signIn, setUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -40,6 +44,17 @@ const Login = () => {
                 navigate(from, { replace: true });
 
             })
+    }
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, provider)
+        .then(result => {
+            const user = result.user;
+            setUser(user);
+            navigate(from, {replace: true});
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
 
     const handleValidateCaptcha = (e) => {
@@ -88,6 +103,8 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
+                            <button className='my-3 w-100' onClick={handleGoogleLogin}> Sign in With Google</button>
+
                         </form>
                         <p><small>New Here?<Link to="/registration">Create an account</Link></small></p>
                     </div>

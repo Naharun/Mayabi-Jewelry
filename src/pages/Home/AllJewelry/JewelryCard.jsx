@@ -10,7 +10,7 @@ const JewelryCard = ({ jewelryData }) => {
     return (
         <>
             <div className="card w-96 bg-base-100 shadow-2xl" >
-                <figure className="h-1/2"><img className="w-full"  src={photo} alt="class" /></figure>
+                <figure><img className="w-full h-3/4"  src={photo} alt="class" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{jewelryName}</h2>
                     <p>Owner Name: <span className="font-medium">{ownerName}</span></p>

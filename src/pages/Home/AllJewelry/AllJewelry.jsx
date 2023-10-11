@@ -1,5 +1,5 @@
 
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../provider/AuthProvider';
 import JewelryCard from './JewelryCard';
@@ -7,9 +7,9 @@ import JewelryCard from './JewelryCard';
 const AllJewelry = () => {
     const [jewelry, setJewelry] = useState([]);
     console.log(jewelry);
-    const { loading} = useContext(AuthContext);
+    const { loading } = useContext(AuthContext);
     useEffect(() => {
-        fetch('http://localhost:5000/jewelry')
+        fetch('https://y-sigma-neon.vercel.app/jewelry')
             .then(res => res.json())
             .then(data => {
                 setJewelry(data);
@@ -27,8 +27,8 @@ const AllJewelry = () => {
             <Helmet>
                 <title>Mayabi Jewelry | All Jewelry</title>
             </Helmet>
-            <h1 className="text-3xl font-serif font-bold text-center">Our All Jewelries Are Here !!<br/>
-            We can also make as you like and you can get it in 10 days.
+            <h1 className="text-3xl font-serif font-bold text-center">Our All Jewelries Are Here !!<br />
+                We can also make as you like and you can get it in 10 days.
             </h1>
             <div className="divider"></div>
             <div className='grid md:grid-cols-2 space-y-4 lg:grid-cols-3 mx-auto w-full'>

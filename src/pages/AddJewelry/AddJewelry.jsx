@@ -18,7 +18,7 @@ const AddJewelry = () => {
         const details = form.details.value;
         const add = { photo,  ownerName, className, ownerEmail, price, availableJewelry, details,}
         console.log(add);
-        fetch('http://localhost:5000/addJewelry', {
+        fetch('https://y-sigma-neon.vercel.app/addJewelry', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
